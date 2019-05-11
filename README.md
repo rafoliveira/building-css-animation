@@ -11,7 +11,7 @@ Here the building plan animation can be seen.
 
 ![](https://i.imgur.com/6Y1UnYp.gif)
 
-Here we can be se the information in each room.
+Here we can see the information in each room.
 
 ## Getting Started
 
