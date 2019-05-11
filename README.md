@@ -1,4 +1,4 @@
-# 3D building Ãnimation
+# 3D Building Animation
 
 This project implements a mall map animation concept of the building DETI. 
 The idea was to implement a simple but efficient platform so the user can easily search for information in each room.
