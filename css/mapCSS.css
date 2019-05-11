@@ -1,0 +1,574 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+  }
+
+
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+
+  body > .container {
+    padding: 60px 15px 0;
+  }
+
+
+  .footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+  }
+
+  code {
+    font-size: 80%;
+  }
+
+  .navbar {
+    padding-left: 10%;
+  }
+
+
+  /*Side Panel
+  ------------------------------------------------------*/
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(245, 245, 245);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Toggle Sliders
+---------------------------------------------------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(16, 194, 25);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px  rgb(16, 194, 25);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Addicional CSS Styles
+---------------------------------------------------*/
+
+#roomTitle {
+  margin-bottom: 20px;
+}
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  text-align: center;
+  vertical-align: bottom;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.grid-item-mobile {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.grid-container-policies{
+  position: relative;
+  grid-template-columns: 25% 75%;
+  display: grid;
+  padding: 10px;
+}
+
+#policiesTable {
+  position: relative;
+  text-align: center;
+  width: 93%;
+  margin: 40px 20px 20px 20px;
+}
+
+#policiesTable td{
+  padding: .75rem;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.addContent{
+  position: absolute;
+  z-index: 2 !important;
+  width: 450px;
+  height: 600px;
+  margin: auto;
+  top: -50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #f2f2f2;
+  border:2px solid black;
+  border-radius: 25px;
+}
+
+.add{
+  align-self: center;
+  justify-self: end;
+  padding: 0;
+  margin: 5px 5px 5px 5px;
+  font-size: 15px;
+  width: 71px;
+  height: 34px;
+}
+
+.x {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  cursor: pointer;
+}
+
+.title {
+  margin: 25px 0px 10px 25px;
+}
+
+.desc {
+  margin: 10px 0px 5px 25px;
+}
+
+#addPermGeneral, #addPermRoom {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 600ms;  /*fade effect*/
+  transition: all 600ms;          /*fade effect*/
+}
+
+hr {
+  border: 1px solid #d6d6d6;
+  margin: 15px 5px 25px 5px;
+}
+
+.infoInput {
+  width: 85%;
+  padding: 15px;
+  margin: 5px 10px 22px 35px;
+  display: inline-block;
+  border: 2px static black;
+  background: #fff;
+
+}
+
+.sucess{
+  color: green;
+  font-size: 25px;
+  margin-left: 30px;
+  margin-right: 10px;
+  -webkit-transition: all 600ms;  /*fade effect*/
+  transition: all 600ms;          /*fade effect*/
+}
+
+.dependent{
+  width: 60%;
+  margin-left: 10%;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.btn:hover{
+  color: #000;
+  background-color: #f1f1f1;
+}
+
+.down {
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+#roomInfoLeft {
+  text-align: left;
+  width: 200px;
+  font-weight: bold;
+}
+
+#ErrorMessage{
+  padding: 10px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  display: none;
+}
+
+#ErrorMessagePolicie{
+  padding: 10px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  display: none;
+}
+
+#roomInfoRightRep{
+  margin-left: 27px;
+  text-align: left;
+  align-self: left;
+  justify-self: left;
+}
+
+#roomInfoRightDep{
+  margin-left: 27px;
+  text-align: left;
+  align-self: left;
+  justify-self: left;
+}
+
+#roomInfoRightLight{
+  text-align: center;
+  justify-self: center;
+}
+
+div.page-item{
+  align-self: center;
+  justify-self: center;
+  margin-top: 10px;
+  padding: 10px;
+  width: 150px;
+}
+
+.polButtons{
+  background-color: #fff;
+  font-size: 18px;
+  margin: 5px;
+  width: 89px;
+}
+
+#roomTitle, #roomTitlePol, #roomTitlePolicy {
+    padding: 8px 8px 8px 32px;
+}
+
+.time {
+  display: inline;
+  resize: horizontal;
+  width: 65px;
+}
+
+.temp{
+  display: inline;
+  resize: horizontal;
+  width: 65px;
+}
+
+.lum{
+  margin-left: 15%;
+  display: inline;
+  resize: horizontal;
+  width: 75px;
+}
+
+/* Map Animations
+-------------------------------------------------------*/
+.main{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  -webkit-transition-delay: 700ms;
+  transition-delay: 700ms;
+}
+
+.container{
+  overflow: hidden;
+  margin-left: 0%;
+  min-width: 100%;
+  height: 100%;
+}
+
+.containerPerm{
+  padding-top: 10%;
+  height: 100%;
+}
+
+.containerPerm > div {
+  float: left;
+}
+
+.tableAdmin{
+  padding-left: 2%;
+  width: 45%;
+}
+
+.tableStudents{
+  padding-left: 6%;
+  padding-right: 2%;
+  width: 51%;
+}
+
+
+h3.grid-item{
+  text-align: left;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 28px;
+}
+
+.ac {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.img-button{
+  filter: invert(100%);
+}
+
+.buttons{
+  position: absolute;
+  z-index: 4 !important;
+  margin-top: 66px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-box{
+  font-size: 2em;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  width: 2em;
+  height: 2em;
+  margin-left: 10px;
+  color: #fff;
+  border: 1px solid #f5f5f5;
+  background: #212529;
+  -webkit-transition: all 600ms;  /*fade effect*/
+  transition: all 600ms;          /*fade effect*/
+}
+
+#submit {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.deti {
+  transform: translate(0vw,15vw);
+  width: 80%;
+  perspective: 6000px;
+  perspective-origin: 0vw 15vw;
+}
+
+#textSVG{
+  opacity: 0;
+}
+
+.levels {
+  -webkit-transform: rotateX(70deg) rotateZ(-40deg) translate(-35vmin,55%);
+  transform: rotateX(70deg) rotateZ(-40deg) translate(-35vmin,55%);
+}
+
+.level {
+
+  position: absolute;
+  cursor: pointer;
+  pointer-events: auto;
+  width: 100%;
+}
+
+.level--1{
+  z-index: 1;
+  box-shadow: -15px 15px 35px 0px #aaa;
+  -webkit-transform: scale(0.62);
+  transform: scale(0.62);
+  -webkit-transition: all 600ms;  /*fade effect*/
+  transition: all 600ms;          /*fade effect*/
+  background-color: #ECECEC;
+  border: 5px solid #000;
+}
+
+.level--2 {
+  z-index: 2 !important;
+  -webkit-transform: translateY(-120px) translateX(150px) scale(0.65);
+  transform: translateY(-120px) translateX(150px) scale(0.65);
+  box-shadow: -15px 15px 35px 0px #aaa;
+  -webkit-transition: all 600ms;  /*fade effect*/
+  transition: all 600ms;          /*fade effect*/
+  background-color: #ECECEC;
+  border: 5px solid #000;
+}
+
+.level--3 {
+  z-index: 3 !important;
+  -webkit-transform: translateY(-250px) translateX(300px) scale(0.67);
+  transform: translateY(-250px) translateX(300px) scale(0.67);
+  box-shadow: -15px 15px 35px 0px #aaa;
+  -webkit-transition: all 600ms;  /*fade effect*/
+  transition: all 600ms;          /*fade effect*/
+  background-color: #ECECEC;
+  border: 5px solid #000;
+}
+
+.levels:not(.levels-open) .level--1:hover{
+  -webkit-transform: scale(0.67);
+  transform: scale(0.67);
+}
+
+.levels:not(.levels-open) .level--2:hover{
+  -webkit-transform: translateY(-120px) translateX(150px) scale(0.7);;
+  transform: translateY(-120px) translateX(150px) scale(0.7);
+}
+
+.levels:not(.levels-open) .level--3:hover{
+  -webkit-transform: translateY(-250px) translateX(300px) scale(0.73);;
+  transform: translateY(-250px) translateX(300px) scale(0.73);
+}
+
+.levels-open{
+  -webkit-transition: -webkit-transform .85s, opacity 1s;
+  transition: transform .85s, opacity 1s;
+  -webkit-transform: translate(2vw,-15vw);
+  transform: translate(2vw,-15vw);
+  -webkit-transition-delay: 700ms;
+  transition-delay: 700ms;
+}
+
+.level-current{
+  box-shadow: 0px 0px 0px 0px;
+  border: 0px solid #000;
+  pointer-events: visibleFill;
+  background-color: #f5f5f5;
+  -webkit-transform: translate(2vw) scale(0.9);
+  transform: translate(2vw) scale(0.9);
+  -webkit-transition-delay: 700ms;
+  transition-delay: 700ms;
+}
+
+.levels--selected-1 .level:not(.level--1),
+.levels--selected-2 .level:not(.level--2),
+.levels--selected-3 .level:not(.level--3){
+  -webkit-transform: translateY(-60vmin);
+  transform: translateY(-60vmin);
+  opacity: 0;
+  visibility: hidden;
+  /* fade out all others */
+}
+
+.level--2 .level-current,
+.level--3 .level-current{  /*no interaction*/
+  pointer-events: none;
+}
+
+.unav2{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  font-size: 150px;
+  top: 35%;
+  left: 10%;
+  -webkit-transition: all 600ms;  /*fade effect*/
+  transition: all 600ms;          /*fade effect*/
+}
+
+.unav3{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  font-size: 150px;
+  top: 35%;
+  left: 10%;
+  -webkit-transition: all 600ms;  /*fade effect*/
+  transition: all 600ms;          /*fade effect*/
+}
