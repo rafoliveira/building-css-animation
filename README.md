@@ -5,6 +5,8 @@ The idea was to implement a simple but efficient platform so the user can easily
 This is only the main page of a larger project made in the context of a university course.
 All the information about that project can be found <a href="http://xcoa.av.it.pt/~pei2017-2018_g03/index.html">here</a>.
 
+<a href="https://rafoliveira.github.io/building-css-animation/">Demo</a>
+
 ![](https://i.imgur.com/9lZ03GW.gif)
 
 Here the building plan animation can be seen.
